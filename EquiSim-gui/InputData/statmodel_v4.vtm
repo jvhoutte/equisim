@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<VTKFile type="vtkMultiBlockDataSet" version="1.0" byte_order="LittleEndian" header_type="UInt32" compressor="vtkZLibDataCompressor">
+  <vtkMultiBlockDataSet>
+    <Block index="0">
+      <DataSet index="0" file="statmodel_v4/statmodel_v4_0.vtp">
+      </DataSet>
+      <DataSet index="1" file="statmodel_v4/statmodel_v4_1.vtp">
+      </DataSet>
+      <DataSet index="2" file="statmodel_v4/statmodel_v4_2.vtp">
+      </DataSet>
+    </Block>
+    <Block index="1">
+      <DataSet index="0" file="statmodel_v4/statmodel_v4_3.vtp">
+      </DataSet>
+      <DataSet index="1" file="statmodel_v4/statmodel_v4_4.vtp">
+      </DataSet>
+      <DataSet index="2" file="statmodel_v4/statmodel_v4_5.vtp">
+      </DataSet>
+    </Block>
+    <Block index="2">
+      <DataSet index="0" file="statmodel_v4/statmodel_v4_6.vtp">
+      </DataSet>
+      <DataSet index="1" file="statmodel_v4/statmodel_v4_7.vtp">
+      </DataSet>
+      <DataSet index="2" file="statmodel_v4/statmodel_v4_8.vtp">
+      </DataSet>
+    </Block>
+    <Block index="3">
+      <DataSet index="0" file="statmodel_v4/statmodel_v4_9.vtp">
+      </DataSet>
+      <DataSet index="1" file="statmodel_v4/statmodel_v4_10.vtp">
+      </DataSet>
+      <DataSet index="2" file="statmodel_v4/statmodel_v4_11.vtp">
+      </DataSet>
+    </Block>
+  </vtkMultiBlockDataSet>
+</VTKFile>

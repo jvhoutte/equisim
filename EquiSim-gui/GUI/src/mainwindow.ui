@@ -1,0 +1,2004 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1079</width>
+    <height>901</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EquiSim</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QVTKOpenGLNativeWidget" name="modelrenderer">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>100</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>865</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="sizeConstraint">
+           <enum>QLayout::SetMinimumSize</enum>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btnOpenFile">
+            <property name="text">
+             <string>Load model</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnSave">
+            <property name="text">
+             <string>Save model</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnScreenshot">
+            <property name="text">
+             <string>Screenshot</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>Articulation</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>MCP angle</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QSlider" name="slider_angle1">
+               <property name="pageStep">
+                <number>1</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>PIP angle</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QSlider" name="slider_angle2">
+               <property name="pageStep">
+                <number>1</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>DIP angle</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QSlider" name="slider_angle3">
+               <property name="pageStep">
+                <number>1</number>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>Skeleton angles</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>DIP</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>MCP</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>PIP</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1" alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>med/lat  </string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QLCDNumber" name="lcd_sp_a2"/>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLCDNumber" name="lcd_co_a2"/>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLCDNumber" name="lcd_lp_a1"/>
+             </item>
+             <item row="0" column="2" alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>ext/flex</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLCDNumber" name="lcd_co_a1"/>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLCDNumber" name="lcd_sp_a1"/>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLCDNumber" name="lcd_lp_a2"/>
+             </item>
+             <item row="2" column="3">
+              <widget class="QLCDNumber" name="lcd_sp_a3"/>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLCDNumber" name="lcd_lp_a3"/>
+             </item>
+             <item row="0" column="3" alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>roll</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLCDNumber" name="lcd_co_a3"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="tabWidget">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>100</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="tab">
+             <attribute name="title">
+              <string>Principal components </string>
+             </attribute>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <widget class="QGroupBox" name="groupBox_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="title">
+                 <string>Principal component weights</string>
+                </property>
+                <property name="flat">
+                 <bool>false</bool>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <property name="sizeConstraint">
+                  <enum>QLayout::SetMinimumSize</enum>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QScrollArea" name="scrollArea">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>100</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="verticalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                   </property>
+                   <property name="horizontalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOn</enum>
+                   </property>
+                   <property name="sizeAdjustPolicy">
+                    <enum>QAbstractScrollArea::AdjustToContents</enum>
+                   </property>
+                   <property name="widgetResizable">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="scrollAreaWidgetContents">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>0</y>
+                      <width>1558</width>
+                      <height>376</height>
+                     </rect>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout">
+                     <item row="4" column="33">
+                      <widget class="QRadioButton" name="radioButton_29">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="31">
+                      <widget class="QRadioButton" name="radioButton_28">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="9">
+                      <widget class="QLabel" name="label_19">
+                       <property name="text">
+                        <string>10</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="15">
+                      <widget class="QLabel" name="label_25">
+                       <property name="text">
+                        <string>16</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QRadioButton" name="radioButton_2">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="16">
+                      <widget class="QLabel" name="label_26">
+                       <property name="text">
+                        <string>17</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="10">
+                      <widget class="QRadioButton" name="radioButton_11">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="3">
+                      <widget class="QRadioButton" name="radioButton_4">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="7">
+                      <widget class="QLabel" name="label_17">
+                       <property name="text">
+                        <string>8</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="12">
+                      <widget class="QLabel" name="label_22">
+                       <property name="text">
+                        <string>13</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="6">
+                      <widget class="QSlider" name="slider_pc7">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="8">
+                      <widget class="QSlider" name="slider_pc9">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="11">
+                      <widget class="QLabel" name="label_21">
+                       <property name="text">
+                        <string>12</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="14">
+                      <widget class="QLabel" name="label_24">
+                       <property name="text">
+                        <string>15</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="9">
+                      <widget class="QSlider" name="slider_pc10">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="4">
+                      <widget class="QLabel" name="label_14">
+                       <property name="text">
+                        <string>5</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="13">
+                      <widget class="QLabel" name="label_23">
+                       <property name="text">
+                        <string>14</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="7">
+                      <widget class="QSlider" name="slider_pc8">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="7">
+                      <widget class="QRadioButton" name="radioButton_8">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="4">
+                      <widget class="QRadioButton" name="radioButton_5">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="13">
+                      <widget class="QRadioButton" name="radioButton_14">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>3</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="18">
+                      <widget class="QRadioButton" name="radioButton_19">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_13">
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="5">
+                      <widget class="QSlider" name="slider_pc6">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="9">
+                      <widget class="QRadioButton" name="radioButton_10">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QSlider" name="slider_pc1">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="19">
+                      <widget class="QRadioButton" name="radioButton_20">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="4">
+                      <widget class="QSlider" name="slider_pc5">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="6">
+                      <widget class="QLabel" name="label_16">
+                       <property name="text">
+                        <string>7</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="6">
+                      <widget class="QRadioButton" name="radioButton_7">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="3">
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>4</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="2">
+                      <widget class="QRadioButton" name="radioButton_3">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="15">
+                      <widget class="QRadioButton" name="radioButton_16">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="8">
+                      <widget class="QLabel" name="label_18">
+                       <property name="text">
+                        <string>9</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="2">
+                      <widget class="QSlider" name="slider_pc3">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QSlider" name="slider_pc2">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="8">
+                      <widget class="QRadioButton" name="radioButton_9">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QRadioButton" name="radioButton_1">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="5">
+                      <widget class="QRadioButton" name="radioButton_6">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="5">
+                      <widget class="QLabel" name="label_15">
+                       <property name="text">
+                        <string>6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="11">
+                      <widget class="QRadioButton" name="radioButton_12">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="3">
+                      <widget class="QSlider" name="slider_pc4">
+                       <property name="pageStep">
+                        <number>1</number>
+                       </property>
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="12">
+                      <widget class="QRadioButton" name="radioButton_13">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="17">
+                      <widget class="QRadioButton" name="radioButton_18">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="10">
+                      <widget class="QLabel" name="label_20">
+                       <property name="text">
+                        <string>11</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="16">
+                      <widget class="QRadioButton" name="radioButton_17">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="10">
+                      <widget class="QSlider" name="slider_pc11">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="13">
+                      <widget class="QSlider" name="slider_pc14">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="18">
+                      <widget class="QSlider" name="slider_pc19">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="12">
+                      <widget class="QSlider" name="slider_pc13">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="11">
+                      <widget class="QSlider" name="slider_pc12">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="14">
+                      <widget class="QSlider" name="slider_pc15">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="15">
+                      <widget class="QSlider" name="slider_pc16">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>2</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="14">
+                      <widget class="QRadioButton" name="radioButton_15">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="17">
+                      <widget class="QLabel" name="label_27">
+                       <property name="text">
+                        <string>18</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="19">
+                      <widget class="QSlider" name="slider_pc20">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="17">
+                      <widget class="QSlider" name="slider_pc18">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="16">
+                      <widget class="QSlider" name="slider_pc17">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="19">
+                      <widget class="QLabel" name="label_29">
+                       <property name="text">
+                        <string>20</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="18">
+                      <widget class="QLabel" name="label_28">
+                       <property name="text">
+                        <string>19</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="20">
+                      <widget class="QSlider" name="slider_pc21">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="20">
+                      <widget class="QLabel" name="label_30">
+                       <property name="text">
+                        <string>21</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="20">
+                      <widget class="QRadioButton" name="radioButton_21">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="24">
+                      <widget class="QRadioButton" name="radioButton_24">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="38">
+                      <widget class="QRadioButton" name="radioButton_31">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="26">
+                      <widget class="QRadioButton" name="radioButton_25">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="28">
+                      <widget class="QRadioButton" name="radioButton_26">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="85">
+                      <widget class="QRadioButton" name="radioButton_47">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="23">
+                      <widget class="QRadioButton" name="radioButton_23">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="58">
+                      <widget class="QRadioButton" name="radioButton_34">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="74">
+                      <widget class="QRadioButton" name="radioButton_41">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="59">
+                      <widget class="QRadioButton" name="radioButton_35">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="60">
+                      <widget class="QRadioButton" name="radioButton_36">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="66">
+                      <widget class="QRadioButton" name="radioButton_38">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="55">
+                      <widget class="QRadioButton" name="radioButton_33">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="22">
+                      <widget class="QRadioButton" name="radioButton_22">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="91">
+                      <widget class="QRadioButton" name="radioButton_53">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="37">
+                      <widget class="QRadioButton" name="radioButton_30">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="29">
+                      <widget class="QRadioButton" name="radioButton_27">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="39">
+                      <widget class="QRadioButton" name="radioButton_32">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="77">
+                      <widget class="QRadioButton" name="radioButton_42">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="61">
+                      <widget class="QRadioButton" name="radioButton_37">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="82">
+                      <widget class="QRadioButton" name="radioButton_44">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="87">
+                      <widget class="QRadioButton" name="radioButton_49">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="71">
+                      <widget class="QRadioButton" name="radioButton_39">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="88">
+                      <widget class="QRadioButton" name="radioButton_50">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="81">
+                      <widget class="QRadioButton" name="radioButton_43">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="73">
+                      <widget class="QRadioButton" name="radioButton_40">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="98">
+                      <widget class="QRadioButton" name="radioButton_60">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="84">
+                      <widget class="QRadioButton" name="radioButton_46">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="92">
+                      <widget class="QRadioButton" name="radioButton_54">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="86">
+                      <widget class="QRadioButton" name="radioButton_48">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="96">
+                      <widget class="QRadioButton" name="radioButton_58">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="89">
+                      <widget class="QRadioButton" name="radioButton_51">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="93">
+                      <widget class="QRadioButton" name="radioButton_55">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="90">
+                      <widget class="QRadioButton" name="radioButton_52">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="97">
+                      <widget class="QRadioButton" name="radioButton_59">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="94">
+                      <widget class="QRadioButton" name="radioButton_56">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="103">
+                      <widget class="QRadioButton" name="radioButton_65">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="100">
+                      <widget class="QRadioButton" name="radioButton_62">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="95">
+                      <widget class="QRadioButton" name="radioButton_57">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="102">
+                      <widget class="QRadioButton" name="radioButton_64">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="106">
+                      <widget class="QRadioButton" name="radioButton_68">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="101">
+                      <widget class="QRadioButton" name="radioButton_63">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="99">
+                      <widget class="QRadioButton" name="radioButton_61">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="105">
+                      <widget class="QRadioButton" name="radioButton_67">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="104">
+                      <widget class="QRadioButton" name="radioButton_66">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="83">
+                      <widget class="QRadioButton" name="radioButton_45">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="22">
+                      <widget class="QSlider" name="slider_pc22">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="23">
+                      <widget class="QSlider" name="slider_pc23">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="24">
+                      <widget class="QSlider" name="slider_pc24">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="26">
+                      <widget class="QSlider" name="slider_pc25">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="28">
+                      <widget class="QSlider" name="slider_pc26">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="29">
+                      <widget class="QSlider" name="slider_pc27">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="31">
+                      <widget class="QSlider" name="slider_pc28">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="33">
+                      <widget class="QSlider" name="slider_pc29">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="37">
+                      <widget class="QSlider" name="slider_pc30">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="38">
+                      <widget class="QSlider" name="slider_pc31">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="39">
+                      <widget class="QSlider" name="slider_pc32">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="55">
+                      <widget class="QSlider" name="slider_pc33">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="58">
+                      <widget class="QSlider" name="slider_pc34">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="59">
+                      <widget class="QSlider" name="slider_pc35">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="60">
+                      <widget class="QSlider" name="slider_pc36">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="61">
+                      <widget class="QSlider" name="slider_pc37">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="66">
+                      <widget class="QSlider" name="slider_pc38">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="71">
+                      <widget class="QSlider" name="slider_pc39">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="73">
+                      <widget class="QSlider" name="slider_pc40">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="81">
+                      <widget class="QSlider" name="slider_pc43">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="74">
+                      <widget class="QSlider" name="slider_pc41">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="77">
+                      <widget class="QSlider" name="slider_pc42">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="82">
+                      <widget class="QSlider" name="slider_pc44">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="83">
+                      <widget class="QSlider" name="slider_pc45">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="84">
+                      <widget class="QSlider" name="slider_pc46">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="85">
+                      <widget class="QSlider" name="slider_pc47">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="87">
+                      <widget class="QSlider" name="slider_pc49">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="86">
+                      <widget class="QSlider" name="slider_pc48">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="88">
+                      <widget class="QSlider" name="slider_pc50">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="89">
+                      <widget class="QSlider" name="slider_pc51">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="90">
+                      <widget class="QSlider" name="slider_pc52">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="91">
+                      <widget class="QSlider" name="slider_pc53">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="92">
+                      <widget class="QSlider" name="slider_pc54">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="93">
+                      <widget class="QSlider" name="slider_pc55">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="94">
+                      <widget class="QSlider" name="slider_pc56">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="95">
+                      <widget class="QSlider" name="slider_pc57">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="97">
+                      <widget class="QSlider" name="slider_pc59">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="96">
+                      <widget class="QSlider" name="slider_pc58">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="98">
+                      <widget class="QSlider" name="slider_pc60">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="100">
+                      <widget class="QSlider" name="slider_pc62">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="102">
+                      <widget class="QSlider" name="slider_pc64">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="99">
+                      <widget class="QSlider" name="slider_pc61">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="101">
+                      <widget class="QSlider" name="slider_pc63">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="103">
+                      <widget class="QSlider" name="slider_pc65">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="104">
+                      <widget class="QSlider" name="slider_pc66">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="105">
+                      <widget class="QSlider" name="slider_pc67">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="106">
+                      <widget class="QSlider" name="slider_pc68">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="106">
+                      <widget class="QLabel" name="label_31">
+                       <property name="text">
+                        <string>68</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="22">
+                      <widget class="QLabel" name="label_32">
+                       <property name="text">
+                        <string>22</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="23">
+                      <widget class="QLabel" name="label_33">
+                       <property name="text">
+                        <string>23</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="24">
+                      <widget class="QLabel" name="label_34">
+                       <property name="text">
+                        <string>24</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="26">
+                      <widget class="QLabel" name="label_35">
+                       <property name="text">
+                        <string>25</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="28">
+                      <widget class="QLabel" name="label_36">
+                       <property name="text">
+                        <string>26</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="29">
+                      <widget class="QLabel" name="label_37">
+                       <property name="text">
+                        <string>27</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="31">
+                      <widget class="QLabel" name="label_38">
+                       <property name="text">
+                        <string>28</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="33">
+                      <widget class="QLabel" name="label_39">
+                       <property name="text">
+                        <string>29</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="37">
+                      <widget class="QLabel" name="label_40">
+                       <property name="text">
+                        <string>30</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="38">
+                      <widget class="QLabel" name="label_41">
+                       <property name="text">
+                        <string>31</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="39">
+                      <widget class="QLabel" name="label_42">
+                       <property name="text">
+                        <string>32</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="55">
+                      <widget class="QLabel" name="label_43">
+                       <property name="text">
+                        <string>33</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="58">
+                      <widget class="QLabel" name="label_44">
+                       <property name="text">
+                        <string>34</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="59">
+                      <widget class="QLabel" name="label_45">
+                       <property name="text">
+                        <string>35</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="60">
+                      <widget class="QLabel" name="label_46">
+                       <property name="text">
+                        <string>36</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="61">
+                      <widget class="QLabel" name="label_47">
+                       <property name="text">
+                        <string>37</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="66">
+                      <widget class="QLabel" name="label_48">
+                       <property name="text">
+                        <string>38</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="71">
+                      <widget class="QLabel" name="label_49">
+                       <property name="text">
+                        <string>39</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="73">
+                      <widget class="QLabel" name="label_50">
+                       <property name="text">
+                        <string>40</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="74">
+                      <widget class="QLabel" name="label_51">
+                       <property name="text">
+                        <string>41</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="77">
+                      <widget class="QLabel" name="label_52">
+                       <property name="text">
+                        <string>42</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="81">
+                      <widget class="QLabel" name="label_53">
+                       <property name="text">
+                        <string>43</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="82">
+                      <widget class="QLabel" name="label_54">
+                       <property name="text">
+                        <string>44</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="83">
+                      <widget class="QLabel" name="label_55">
+                       <property name="text">
+                        <string>45</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="84">
+                      <widget class="QLabel" name="label_56">
+                       <property name="text">
+                        <string>46</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="85">
+                      <widget class="QLabel" name="label_57">
+                       <property name="text">
+                        <string>47</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="86">
+                      <widget class="QLabel" name="label_58">
+                       <property name="text">
+                        <string>48</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="87">
+                      <widget class="QLabel" name="label_59">
+                       <property name="text">
+                        <string>49</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="88">
+                      <widget class="QLabel" name="label_60">
+                       <property name="text">
+                        <string>50</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="89">
+                      <widget class="QLabel" name="label_61">
+                       <property name="text">
+                        <string>51</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="90">
+                      <widget class="QLabel" name="label_62">
+                       <property name="text">
+                        <string>52</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="91">
+                      <widget class="QLabel" name="label_63">
+                       <property name="text">
+                        <string>53</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="92">
+                      <widget class="QLabel" name="label_64">
+                       <property name="text">
+                        <string>54</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="93">
+                      <widget class="QLabel" name="label_65">
+                       <property name="text">
+                        <string>55</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="94">
+                      <widget class="QLabel" name="label_66">
+                       <property name="text">
+                        <string>56</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="95">
+                      <widget class="QLabel" name="label_67">
+                       <property name="text">
+                        <string>57</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="96">
+                      <widget class="QLabel" name="label_68">
+                       <property name="text">
+                        <string>58</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="97">
+                      <widget class="QLabel" name="label_69">
+                       <property name="text">
+                        <string>59</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="98">
+                      <widget class="QLabel" name="label_70">
+                       <property name="text">
+                        <string>60</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="99">
+                      <widget class="QLabel" name="label_71">
+                       <property name="text">
+                        <string>61</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="100">
+                      <widget class="QLabel" name="label_72">
+                       <property name="text">
+                        <string>62</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="101">
+                      <widget class="QLabel" name="label_73">
+                       <property name="text">
+                        <string>63</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="102">
+                      <widget class="QLabel" name="label_74">
+                       <property name="text">
+                        <string>64</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="103">
+                      <widget class="QLabel" name="label_75">
+                       <property name="text">
+                        <string>65</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="104">
+                      <widget class="QLabel" name="label_76">
+                       <property name="text">
+                        <string>66</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="105">
+                      <widget class="QLabel" name="label_77">
+                       <property name="text">
+                        <string>67</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_2">
+             <attribute name="title">
+              <string>Biometric</string>
+             </attribute>
+             <widget class="QGroupBox" name="groupBox_4">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>10</y>
+                <width>251</width>
+                <height>69</height>
+               </rect>
+              </property>
+              <property name="title">
+               <string>Select biometric</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QComboBox" name="biometric_combobox">
+                 <item>
+                  <property name="text">
+                   <string>Cannon curvradius</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Cannon mediolateralwidth</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Cannon ridgewidth</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Coffin capsuledev</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Coffin coffinangle</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Coffin palmarangle</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Coffin toeheelsupport</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule froglength</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule frogwidth</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule heelangle</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule heelheight</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule hoofwidth</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule supportlength</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule toeangle</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule toelength</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule underrun</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Capsule wallthickness</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>longpastern curvradius</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>longpastern length</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>longpastern depth</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>longpastern width</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>shortpastern curvradius</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>shortpastern length</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>shortpastern depth</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>shortpastern width</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>navicular angle</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>navicular curvradius</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>navicular length</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="geometry">
+               <rect>
+                <x>9</x>
+                <y>100</y>
+                <width>251</width>
+                <height>67</height>
+               </rect>
+              </property>
+              <property name="title">
+               <string>Value</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QSlider" name="biometric_slider">
+                 <property name="maximum">
+                  <number>100</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLCDNumber" name="biometric_display"/>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKOpenGLNativeWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">/usr/local/include/vtk-9.0/QVTKOpenGLNativeWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
