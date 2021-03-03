@@ -2,14 +2,14 @@
 
 
 ## EquiSim
-This repository contains the graphical user interface, presented in "EquiSim: An open-source articulatable statistical model of the equine distal limb". This repository contains the C++ source code. 
+This repository contains the graphical user interface, presented in ["EquiSim: An open-source articulatable statistical model of the equine distal limb"](https://www.frontiersin.org/articles/10.3389/fvets.2021.623318/full). This repository contains the C++ source code. 
 
 
 ![alt text](https://github.com/jvhoutte/equisim/blob/main/figures/model_example.png?raw=true)
 
 ## Requirements
 
-* VTK: >9.0
+* VTK: 9.0
 * Qt: 5
 * CMake: >2.8
 
