@@ -5,7 +5,7 @@
 This repository contains the graphical user interface, presented in "EquiSim: An open-source articulatable statistical model of the equine distal limb". This repository contains the C++ source code. 
 
 
-![alt text](https://github.com/jvhoutte/equisim/figures/model_example.png?raw=true)
+![alt text](https://github.com/jvhoutte/equisim/blob/main/figures/model_example.png?raw=true)
 
 ## Requirements
 
