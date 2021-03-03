@@ -5,7 +5,7 @@
 This repository contains the graphical user interface, presented in "EquiSim: An open-source articulatable statistical model of the equine distal limb". This repository contains the C++ source code. 
 
 
-
+![alt text](https://github.com/jvhoutte/equisim/figures/model_example.png?raw=true)
 
 ## Requirements
 
@@ -26,9 +26,9 @@ The commands to build the project would be:
 
 #### Citation
 
-Please considering citing our projects in your publications if they help your research.
+Please consider citing our project in your publications if they help your research:
 
-Publication is currently in review. 
+Van Houtte, J., Vandenberghe, F., Zheng, G., Huysmans, T., & Sijbers, J. (2021). EquiSim: An open-source articulatable statistical model of the equine distal limb. Frontiers in Veterinary Science, 8, 75.
 
 #### Contact 
 
